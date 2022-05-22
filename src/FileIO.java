@@ -19,14 +19,14 @@ public class FileIO implements IO
     public void registerGuest()
     {
         Scanner in = new Scanner(System.in);
-        System.out.print("Fulde navn: ");
+        System.out.print("Full name: ");
         String name = in.nextLine();
-        System.out.print("Køn (M/K): ");
+        System.out.print("Gender (M/F): ");
         String gender = in.next();
         in.nextLine();
-        System.out.print("Nationalitet: ");
+        System.out.print("Nationality: ");
         String country = in.nextLine();
-        System.out.print("Kontakt (e-mail eller tlf): ");
+        System.out.print("Contact (e-mail or phone): ");
         String contact = in.next();
         Guest guest = new Guest(name, gender, country, contact);
         guests.add(guest);
@@ -46,20 +46,20 @@ public class FileIO implements IO
     public void bookRoom()
     {
         Scanner in = new Scanner(System.in);
-        System.out.print("Indtast fulde navn: ");
+        System.out.print("Full name: ");
         String name  = in.nextLine();
         if(findGuest(name) != null)
         {
             Guest guest = findGuest(name);
-            System.out.print("Indtast værelsesnummer: ");
+            System.out.print("Room number: ");
             int roomNum = in.nextInt();
             if(isAvailable(roomNum))
             {
-                System.out.print("Indtast antal dage: ");
+                System.out.print("Insert amount of days: ");
                 int days = in.nextInt();
-                System.out.print("Indtast startdato (dd/mm/åååå): ");
+                System.out.print("Insert start date (dd/mm/yyyy): ");
                 String start = in.next();
-                System.out.print("Indtast slutdato (dd/mm/åååå): ");
+                System.out.print("Insert end date (dd/mm/yyyy): ");
                 String end = in.next();
                 for (int i = 0; i < rooms.size(); i++)
                 {
@@ -68,19 +68,19 @@ public class FileIO implements IO
                         rooms.get(i).setStatus(true);
                         Room room = getRoom(roomNum);
                         bookings.add(new Booking(room, guest, days, start, end));
-                        System.out.println("Værelse er nu reserveret!");
+                        System.out.println("Room is booked!");
                         return;
                     }
                 }
             }
             else
             {
-                System.out.println("Værelsesnummer "+roomNum+" er ikke tilgængelig!");
+                System.out.println("Room number "+roomNum+" is not available!");
             }
         }
         else
         {
-            System.out.println("Gæst er ikke registreret!");
+            System.out.println("Guest is not registered!");
         }
     }
 
@@ -115,21 +115,21 @@ public class FileIO implements IO
     public void orderFood()
     {
         Scanner in = new Scanner(System.in);
-        System.out.print("Indtast værelsesnummer: ");
+        System.out.print("Room number: ");
         int roomNum = in.nextInt();
         for (int i = 0; i < bookings.size(); i++)
         {
             if(bookings.get(i).getRoom().getRoomNumber() == roomNum)
             {
-                System.out.print("Indtast varer til bestilling: ");
+                System.out.print("Enter items to order: ");
                 String items = in.next();
                 foodOrder.get(i).placeOrder(items);
                 bookings.get(i).setFood(new Food(9,foodOrder.get(i).getFoodItem(), foodOrder.get(i).getFoodPrice()));
-                System.out.println("Ordren er afgivet!");
+                System.out.println("The order has been placed!");
                 return;
             }
         }
-        System.out.println("Beklager, dette værelse er ikke reserveret!");
+        System.out.println("Sorry, this room is not reserved!");
     }
 
     public void showFoodMenu()
@@ -143,7 +143,7 @@ public class FileIO implements IO
     public void checkout()
     {
         Scanner in = new Scanner(System.in);
-        System.out.print("Indtast værelsesnummer: ");
+        System.out.print("Room number: ");
         int roomNum = in.nextInt();
         for (int i = 0; i < bookings.size(); i++)
         {
@@ -163,13 +163,13 @@ public class FileIO implements IO
                 return;
             }
         }
-        System.out.println("Beklager, dette værelse er ikke reserveret!");
+        System.out.println("Sorry, this room is not reserved!");
     }
 
     public void cancelBooking()
     {
         Scanner in = new Scanner(System.in);
-        System.out.print("Indtast værelsesnummer: ");
+        System.out.print("Room number: ");
         int roomNum = in.nextInt();
         for (int i = 0; i < bookings.size(); i++)
         {
@@ -184,11 +184,11 @@ public class FileIO implements IO
                         break;
                     }
                 }
-                System.out.println("Booking er nu annulleret!");
+                System.out.println("Booking is cancelled!");
                 return;
             }
         }
-        System.out.println("Beklager, dette værelse er ikke reserveret!");
+        System.out.println("Sorry, this room is not reserved!");
     }
 
     public void showAllRegisteredGuests()

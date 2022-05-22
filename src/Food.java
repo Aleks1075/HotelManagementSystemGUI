@@ -38,7 +38,7 @@ public class Food
     @Override
     public String toString()
     {
-        return "ID: " + ID + "\n" + "Mad vare: " + foodItem + "\n" +
-                "Pris: DKK " + foodPrice + "\n" + "-----------------" + "\n";
+        return "ID: " + ID + "\n" + "Food item: " + foodItem + "\n" +
+                "Price: DKK " + foodPrice + "\n" + "-----------------" + "\n";
     }
 }

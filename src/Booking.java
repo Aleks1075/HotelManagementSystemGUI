@@ -26,13 +26,13 @@ public class Booking
     public String getReceipt()
     {
         String recipt = "-------------------------------------\n";
-        recipt += "\t\t\tKVITTERING\n";
+        recipt += "\t\t\tRECEIPT\n";
         recipt += "-------------------------------------\n";
-        recipt += String.format("Værelsesnummer: %8s%n", room.getRoomNumber());
-        recipt += String.format("Antal af dage: %8s%n", days);
-        recipt += String.format("Start dato: %20s%n", startDate);
-        recipt += String.format("Slut dato:  %20s%n", endDate);
-        recipt += String.format("Total beløb for værelse og mad: %1s%n", String.format("%.2f", (days*room.getPrice())));//+food.getFoodPrice())));
+        recipt += String.format("Room number: %8s%n", room.getRoomNumber());
+        recipt += String.format("Number of days: %8s%n", days);
+        recipt += String.format("Start date: %20s%n", startDate);
+        recipt += String.format("Slut date:  %20s%n", endDate);
+        recipt += String.format("Total amount for room and food: %1s%n", String.format("%.2f", (days*room.getPrice())));//+food.getFoodPrice())));
         recipt += "-------------------------------------" + "\n";
         return recipt;
     }
@@ -100,8 +100,8 @@ public class Booking
     @Override
     public String toString()
     {
-        return "Værelsesnummer " + room.getRoomNumber() + " er booket af "+guest.getName()+
-                " fra " + startDate + " til " + endDate;
+        return "Room number " + room.getRoomNumber() + " is booked by "+guest.getName()+
+                " from " + startDate + " to " + endDate;
     }
 
 }

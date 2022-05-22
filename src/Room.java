@@ -85,8 +85,8 @@ public class Room
     @Override
     public String toString()
     {
-        return "Værelsesnummer: " + roomNumber + ", Størrelse: " + size + ", Kategori: " + category
-                + ", Pris: DKK " + price + ", Status: " + status + ", Faciliteter: " + facilities;
+        return "Room number: " + roomNumber + ", Size: " + size + ", Category: " + category
+                + ", Price: DKK " + price + ", Status: " + status + ", Facilities: " + facilities;
     }
 
 }

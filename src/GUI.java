@@ -6,11 +6,11 @@ import java.awt.event.ActionListener;
 public class GUI extends JFrame implements ActionListener
 {
     JFrame frame = new JFrame();
-    JButton myButton = new JButton("Log på");
+    JButton myButton = new JButton("Login");
     JPanel panel = new JPanel();
-    JLabel userLabel = new JLabel("Brugernavn");
+    JLabel userLabel = new JLabel("Username");
     JTextField userText = new JTextField();
-    JLabel passwordLabel = new JLabel("Adgangskode");
+    JLabel passwordLabel = new JLabel("Password");
     JPasswordField passwordText = new JPasswordField();
     JLabel tryAgain = new JLabel("");
     JLabel label = new JLabel();
@@ -66,6 +66,6 @@ public class GUI extends JFrame implements ActionListener
             HotelMenu hotelMenu = new HotelMenu();
         }
         tryAgain.setForeground(Color.red);
-        tryAgain.setText("Forkert input. Prøv igen!");
+        tryAgain.setText("Wrong input. Try again!");
     }
 }

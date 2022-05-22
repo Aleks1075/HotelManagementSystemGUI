@@ -11,20 +11,20 @@ public class Hotel
 
         while (true)
         {
-            System.out.println("Velkommen til booking system");
+            System.out.println("Welcome to the booking system");
             System.out.println("-------------------------------");
-            System.out.println("1. Registrer gæst");
-            System.out.println("2. Se alle registrerede gæster");
-            System.out.println("3. Vis alle værelser");
-            System.out.println("4. Vis ledige værelser");
-            System.out.println("5. Book et værelse");
-            System.out.println("6. Vis alle bookings");
-            System.out.println("7. Se menukort");
-            //System.out.println("6. Bestil mad på værelset"); Vi fik det ikke til at fungere 100%, derfor er denne mulighed udkommenteret
-            System.out.println("8. Check ud af værelse");
-            System.out.println("9. Afbestil reservation");
-            System.out.println("10. Gem & Afslut \n");
-            System.out.print("Indtast dit valg: ");
+            System.out.println("1. Register guest");
+            System.out.println("2. See all registered guests");
+            System.out.println("3. Show all rooms");
+            System.out.println("4. Show available rooms");
+            System.out.println("5. Book a room");
+            System.out.println("6. View all bookings");
+            System.out.println("7. See menu card");
+            //System.out.println("x. Order food in the room");
+            System.out.println("8. Check out of room");
+            System.out.println("9. Cancel reservation");
+            System.out.println("10. Save and Exit \n");
+            System.out.print("Enter your choice: ");
             int choice = in.nextInt();
             switch (choice)
             {
@@ -59,11 +59,11 @@ public class Hotel
                 case 10:
                     fileIO.saveData();
                     System.out.println("----------------------------------");
-                    System.out.println("Tak for at benytte vores booking system");
+                    System.out.println("Thank you for using our booking system");
                     System.exit(0);
                     break;
                 default:
-                    System.out.println("Ugyldigt valg!");
+                    System.out.println("Invalid choice!");
                     break;
             }
         }
