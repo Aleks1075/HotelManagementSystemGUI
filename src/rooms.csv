@@ -1,0 +1,20 @@
+1,Single,Standard,1000.0,false,Fan
+2,Single,Standard,1000.0,false,Fan
+3,Single,Standard,1000.0,false,Fan
+4,Single,Standard,1000.0,false,Fan
+5,Single,Standard,1000.0,false,Fan
+6,Double,Standard,2000.0,false,Fan
+7,Double,Standard,2000.0,false,Fan
+8,Double,Standard,2000.0,false,Fan
+9,Double,Standard,2000.0,false,Fan
+10,Double,Standard,2000.0,false,Fan
+11,Single,Luxury,3000.0,false,AC & Minibar
+12,Single,Luxury,3000.0,false,AC & Minibar
+13,Single,Luxury,3000.0,false,AC & Minibar
+14,Single,Luxury,3000.0,false,AC & Minibar
+15,Single,Luxury,3000.0,false,AC & Minibar
+16,Double,Luxury,4000.0,false,AC & Minibar
+17,Double,Luxury,4000.0,false,AC & Minibar
+18,Double,Luxury,4000.0,false,AC & Minibar
+19,Double,Luxury,4000.0,true,AC & Minibar
+20,Double,Luxury,4000.0,true,AC & Minibar
